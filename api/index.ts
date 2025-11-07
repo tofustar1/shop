@@ -8,10 +8,9 @@ import config from "./config";
 import reviewsRouter from "./routers/reviews";
 
 const app = express();
-const port = 8000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(config.corsOptions));
 app.use(express.static('public'));
 
 app.use('/products', productsRouter);
@@ -22,8 +21,8 @@ app.use('/reviews', reviewsRouter);
 const run = async () => {
   await mongoose.connect(config.db);
 
-  app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+  app.listen(config.port, () => {
+    console.log(`Listening on port ${config.port}`);
   });
 
   process.on('exit', () => {

@@ -18,7 +18,7 @@ pm2 kill
 
 echo '### API'
 
-cd ../shop-api || exit 1
+cd ../api || exit 1
 
 echo '### Running fixtures'
 npm run seed:test
@@ -27,7 +27,7 @@ echo '### Running API server in test mode'
 pm2 start "npm run start:test" --name="shop-api-test"
 
 echo '### Frontend'
-cd ../shop-frontend || exit 1
+cd ../frontend || exit 1
 
 echo '### Running Frontend in test mode'
 pm2 start "npm run start:test" --name="shop-frontend-test"
@@ -38,7 +38,7 @@ done
 
 echo '### Running tests'
 
-cd '../shop-tests' || exit 1
+cd '../tests' || exit 1
 npx codeceptjs run --steps "$@"
 EXIT_CODE=$?
 

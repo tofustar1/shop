@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start:test": "PORT=5183 VITE_API_URL=http://localhost:8010 vite",
     "format:check": "npx prettier . --check",
     "format": "npx prettier . --write",
     "build": "tsc -b && vite build",

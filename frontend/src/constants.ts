@@ -1,3 +1,2 @@
-export const API_URL = 'http://localhost:8000';
-export const GOOGLE_CLIENT_ID =
-  '363581354099-3gbn3u3pc29us7d0thh59cfbs6b8vtq1.apps.googleusercontent.com';
+export const API_URL = import.meta.env['VITE_API_URL'];
+export const GOOGLE_CLIENT_ID = import.meta.env['VITE_GOOGLE_CLIENT_ID'];
