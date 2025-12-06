@@ -10,7 +10,8 @@
     "format": "npx prettier . --write",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preview:test": "vite preview --port=5183"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
