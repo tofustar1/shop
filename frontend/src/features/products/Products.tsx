@@ -53,7 +53,7 @@ const Products = () => {
       <Grid container direction="column" spacing={2} sx={{ flexGrow: 1 }}>
         <Grid container justifyContent="space-between">
           <Grid>
-            <Typography variant="h4">Products</Typography>
+            <Typography variant="h4">Products List</Typography>
           </Grid>
           {user && user.role === 'admin' && (
             <Grid>
